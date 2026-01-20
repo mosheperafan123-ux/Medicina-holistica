@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "Página web de Lucia Manrique U. - Terapeuta Holística",
   "scripts": {
-    "start": "npx serve -s . -l 3000"
+    "start": "serve -s . -l 3000",
+    "postinstall": "echo 'Build complete'"
   },
   "dependencies": {
-    "serve": "^14.2.0"
+    "serve": "14.2.4"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
