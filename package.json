@@ -2,12 +2,9 @@
   "name": "medicina-holistica",
   "version": "1.0.0",
   "description": "Página web de Lucia Manrique U. - Terapeuta Holística",
+  "main": "server.js",
   "scripts": {
-    "start": "serve -s . -l 3000",
-    "postinstall": "echo 'Build complete'"
-  },
-  "dependencies": {
-    "serve": "14.2.4"
+    "start": "node server.js"
   },
   "engines": {
     "node": "20.x"
