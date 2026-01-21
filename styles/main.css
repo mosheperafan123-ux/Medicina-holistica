@@ -13,7 +13,7 @@
   --accent-sage: #9DC88D;
   --accent-gold: #C9A96E;
   --accent-gold-light: #E5D4B3;
-  
+
   /* Neutrals */
   --white: #FFFFFF;
   --off-white: #FAFAF8;
@@ -23,17 +23,17 @@
   --gray-dark: #555555;
   --dark: #1A1A2E;
   --black: #0D0D0D;
-  
+
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, #2D7A4E 0%, #4CAF50 100%);
   --gradient-hero: linear-gradient(135deg, rgba(45, 122, 78, 0.9) 0%, rgba(76, 175, 80, 0.85) 100%);
   --gradient-soft: linear-gradient(180deg, #A8E6CF 0%, #FAFAF8 100%);
-  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
-  
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+
   /* Typography */
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  
+
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -41,27 +41,27 @@
   --spacing-lg: 4rem;
   --spacing-xl: 6rem;
   --spacing-xxl: 8rem;
-  
+
   /* Borders */
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-xl: 40px;
   --radius-full: 9999px;
-  
+
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.12);
   --shadow-xl: 0 16px 60px rgba(0, 0, 0, 0.15);
   --shadow-green: 0 8px 30px rgba(45, 122, 78, 0.3);
-  
+
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
   --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  
+
   /* Layout */
   --max-width: 1400px;
   --header-height: 80px;
@@ -104,7 +104,8 @@ a {
   transition: var(--transition-normal);
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -116,17 +117,33 @@ button {
 }
 
 /* ========== TYPOGRAPHY ========== */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
   color: var(--dark);
 }
 
-h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
-h2 { font-size: clamp(2rem, 4vw, 3rem); }
-h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
-h4 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h4 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
 
 p {
   margin-bottom: 1rem;
@@ -204,7 +221,7 @@ p {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: var(--transition-slow);
 }
 
@@ -512,7 +529,7 @@ p {
 /* Scroll Indicator */
 .scroll-indicator {
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -779,7 +796,7 @@ p {
   direction: rtl;
 }
 
-.service-detail-grid.reverse > * {
+.service-detail-grid.reverse>* {
   direction: ltr;
 }
 
@@ -1378,6 +1395,7 @@ p {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1385,30 +1403,43 @@ p {
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateX(-50%) translateY(0);
   }
+
   40% {
     transform: translateX(-50%) translateY(-10px);
   }
+
   60% {
     transform: translateX(-50%) translateY(-5px);
   }
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
   }
+
   50% {
     box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
   }
@@ -1434,26 +1465,27 @@ p {
 }
 
 @media (max-width: 992px) {
+
   .about-grid,
   .service-detail-grid,
   .contact-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
   }
-  
+
   .service-detail-grid.reverse {
     direction: ltr;
   }
-  
+
   .about-image {
     max-width: 500px;
     margin: 0 auto;
   }
-  
+
   .about-badge {
     right: 20px;
   }
-  
+
   .nav {
     position: fixed;
     top: 0;
@@ -1466,37 +1498,37 @@ p {
     transform: translateX(100%);
     transition: var(--transition-normal);
   }
-  
+
   .nav.active {
     transform: translateX(0);
   }
-  
+
   .nav-list {
     flex-direction: column;
     gap: var(--spacing-sm);
   }
-  
+
   .nav-link {
     font-size: 1.25rem;
     color: var(--dark) !important;
   }
-  
+
   .menu-toggle {
     display: flex;
   }
-  
+
   .menu-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
-  
+
   .menu-toggle.active span:nth-child(2) {
     opacity: 0;
   }
-  
+
   .menu-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
   }
-  
+
   .testimonial-card {
     flex: 0 0 calc(50% - var(--spacing-sm));
     min-width: 300px;
@@ -1508,49 +1540,49 @@ p {
     --spacing-lg: 3rem;
     --spacing-xl: 4rem;
   }
-  
+
   .hero-content {
     text-align: center;
   }
-  
+
   .hero-buttons {
     justify-content: center;
   }
-  
+
   .hero-features {
     justify-content: center;
   }
-  
+
   .about-stats {
     grid-template-columns: 1fr;
   }
-  
+
   .services-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .benefits-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .testimonial-card {
     flex: 0 0 100%;
     min-width: 100%;
   }
-  
+
   .footer-grid {
     grid-template-columns: 1fr;
     text-align: center;
   }
-  
+
   .footer-brand p {
     max-width: 100%;
   }
-  
+
   .footer-social {
     justify-content: center;
   }
-  
+
   .whatsapp-float {
     bottom: 20px;
     right: 20px;
@@ -1563,31 +1595,31 @@ p {
   :root {
     --spacing-md: 1.5rem;
   }
-  
+
   .hero-buttons {
     flex-direction: column;
     width: 100%;
   }
-  
+
   .hero-buttons .btn {
     width: 100%;
   }
-  
+
   .about-badge {
     width: 100px;
     height: 100px;
     bottom: -15px;
     right: 10px;
   }
-  
+
   .about-badge span:first-child {
     font-size: 1.75rem;
   }
-  
+
   .cta-buttons {
     flex-direction: column;
   }
-  
+
   .cta-buttons .btn {
     width: 100%;
   }
